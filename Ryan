@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Coding Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern CSS Reset & CSS Variables */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-color: #0d0e15;
+            --card-bg: #161925;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --neon-cyan: #00f2fe;
+            --neon-purple: #4facfe;
+            --glow-shadow: rgba(0, 242, 254, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Subtle background ambient glow elements */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(79, 172, 254, 0.15) 0%, transparent 70%);
+            top: -10%;
+            left: -10%;
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, transparent 70%);
+            bottom: -10%;
+            right: -10%;
+            z-index: -1;
+        }
+
+        /* Centered Main Container */
+        .container {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 2px solid var(--neon-cyan);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--glow-shadow);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 242, 254, 0.3);
+        }
+
+        /* Header Style */
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        /* Intro Paragraph */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Stylized Action Badge (Optional visual polish) */
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 242, 254, 0.1);
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            border-radius: 50px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Footer Style */
+        footer {
+            margin-top: auto;
+            padding: 2rem 1rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            opacity: 0.7;
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            p { font-size: 1rem; }
+            .container { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="badge">System Online</div>
+        <h1>Welcome to [YOUR SITE NAME]</h1>
+        
+        <p>
+            This is my master coding hub. A centralized command center built to host my web applications, experiment with cutting-edge tech stacks, and showcase my development journey. Stay tuned as future modules deploy.
+        </p>
+    </div>
+
+    <footer>
+        Created by [YOUR NAME] in 2026
+    </footer>
+
+</body>
+</html>
